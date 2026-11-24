@@ -1,0 +1,9 @@
+project: savantenvs/vsmartcard
+target: fuzz-opicc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-opicc/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_opicc
+    libfuzzer: true
+    timeout: 5

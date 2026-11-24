@@ -1,0 +1,9 @@
+project: savantenvs/vsmartcard
+target: fuzz-ccid
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-ccid/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_ccid
+    libfuzzer: true
+    timeout: 5
